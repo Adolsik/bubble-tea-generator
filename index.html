@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <title>Bubble Tea Configurator</title>
+</head>
+<body>
+    <header>Twoja Bubble Tea</header>
+    <section> <img id="bubbleTeaImg" src="assets/bubbleTea.png" alt="Bubble tea"> </section>
+    <main>
+        <select class="bg-secondary p-2 text-dark bg-opacity-10 form-select" size="1" name="rodzaj" id="rodzaj">
+            <option value="" selected disabled >Rodzaj herbaty</option>
+            <option value="">Czarna</option>
+            <option value="">Zielona</option>
+            <option value="">Oolong</option>
+        </select>
+        <select class="bg-secondary p-2 text-dark bg-opacity-10 form-select" size="1" name="baza" id="baza">
+            <option value="" selected disabled >Baza</option>
+            <option value="klasyczna">Klasyczna (tylko herbata)</option>
+            <option value="mlekoz">Mleko zwykłe (+2zł)</option>
+            <option value="mlekos">Mleko sojowe (+2zł) </option>
+        </select>
+        <select class="bg-secondary p-2 text-dark bg-opacity-10 form-select" size="1" name="rozmiar" id="rozmiar">
+            <option value="" selected disabled >Rozmiar</option>
+            <option value="zwykly">Zwykły</option>
+            <option value="powiekszony">Powiększony (+4zł)</option>
+        </select>
+        <select class="bg-secondary p-2 text-dark bg-opacity-10 form-select" multiple size="1" name="syrop" id="syrop">
+            <option value="" selected disabled >Syrop</option>
+            <option value="">Melon</option>
+            <option value="">Zielone jabłko</option>
+            <option value="">Ananas</option>
+            <option value="">Jagoda</option>
+            <option value="">Wiśnia</option>
+            <option value="">Biała brzoskwinia</option>
+        </select>
+        <select class="bg-secondary p-2 text-dark bg-opacity-10 form-select" multiple size="1" name="dodatek" id="dodatek">
+            <option value="" selected disabled >Dodatek</option>
+            <option value="">Tapioka</option>
+            <option value="">Kulki boba mango</option>
+            <option value="">Kulki boba marakuja</option>
+            <option value="">Kulki boba truskawka</option>
+            <option value="">Kulki boba wiśnia</option>
+            <option value="">Kulki boba kiwi</option>
+            <option value="">Żelki zielone jabłko</option>
+            <option value="">Żelki winogrono</option>
+            <option value="">Żelki liczi</option>
+        </select>
+        <label id="labelExtraDodatek">Każdy extra dodatek (+4zł) i syrop (+3zł) </label>
+        <section id="sectionRabat">
+            <input type="checkbox" name="rabat" id="rabat">
+            <label id="labelRabat">Mam swój kubek <br>(10% rabatu)</label>
+        </section>
+        <section id="sectionCena"> <label id="labelCena"> Cena: <br> <label id="labelCenaZl"> 16 zł</label> </label> </section>
+    </main>
+</body>
+<script src="assets/priceAdjustment.js"></script>
+</html>
