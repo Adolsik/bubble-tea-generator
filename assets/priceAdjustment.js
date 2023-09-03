@@ -5,6 +5,8 @@ let price = 16;
 let labelPrice = document.getElementById("labelCenaZl");
 let selectType = document.getElementById("baza");
 let selectSize = document.getElementById("rozmiar");
+let selectAddon = document.getElementById("dodatek");
+let selectSirup = document.getElementById("syrop");
 let checkboxDiscount = document.getElementById("rabat");
 
 let counter1 = 0;
@@ -85,6 +87,10 @@ checkboxDiscount.addEventListener("change",function(){
     }else{
         labelPrice.innerHTML = `${price - (price / 10)} zł`
     }
+});
+
+selectAddon.addEventListener("change",function(){
+    
 });
 
 
