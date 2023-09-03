@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Bubble Tea Configurator</title>
+</head>
+<body class="bg-gray-600">
+    <div class="flex justify-center">
+        <header class="h-20 w-full md:w-1/3 text-2xl mt-5 m-2 p-3 border bg-gray-700 border-gray-800 rounded-lg shadow-lg text-white">
+            <div class="flex justify-center"><label class="font-mono"> Twoja Bubble Tea </label></div>
+            <div class="flex justify-center text-lg font-light"><label id="labelPrice"> Cena: <label id="labelPriceVal"> 16 zł</label> </label></div>
+          </header>
+    </div>
+       <!-- Progress bar -->
+    <div class="flex justify-center items-center text-white m-1 p-1 text-lg font-light">
+        <label for="progress">Postęp:</label>
+    </div>
+    <div class="flex justify-center items-center">
+        <div id="progress" class="bg-gray-500 flex w-1/2 justify-start items-start p-2 rounded-lg h-12">
+            <div id="progressBar" class="text-green-600 bg-green-600 rounded-sm p-1" hidden>0</div>
+        </div> 
+        <div class="absolute text-white text-xs md:text-lg">
+            <label id="progressStep">Wybierz rodzaj herbaty</label>
+        </div>
+    </div>
+    <section class="flex justify-center items-center"> <img id="bubbleTeaImg" class="w-1/4" src="assets/bubbleTea.png" alt="Bubble tea"> </section>
+    <main>
+        <div class="grid grid-cols-3 gap-10 m-2">
+            <select class="select" size="1" name="teaType" id="teaType" required>
+                <option value="disabled" selected disabled >Rodzaj herbaty</option>
+                <option value="">Czarna</option>
+                <option value="">Zielona</option>
+                <option value="">Oolong</option>
+            </select>
+            <select class="select" size="1" name="base" id="base" required>
+                <option value="disabled" selected disabled >Baza</option>
+                <option value="0">Klasyczna (tylko herbata)</option>
+                <option value="2">Mleko zwykłe (+2zł)</option>
+                <option value="2">Mleko sojowe (+2zł) </option>
+            </select>
+            <select class="select" size="1" name="size" id="size" required>
+                <option value="disabled" selected disabled >Rozmiar</option>
+                <option value="0">Zwykły</option>
+                <option value="4">Powiększony (+4zł)</option>
+            </select>
+        </div>
+        <div class="grid grid-cols-2 gap-10 m-4">
+            <select class="selectMultiple" multiple size="1" name="sirup" id="sirup">
+                <option value="disabled" selected disabled >Syrop</option>
+                <option value="sirupMelon">Melon</option>
+                <option value="sirupApple">Zielone jabłko</option>
+                <option value="sirupPineapple">Ananas</option>
+                <option value="sirupBlueberry">Jagoda</option>
+                <option value="sirupCherry">Wiśnia</option>
+                <option value="sirupPeach">Biała brzoskwinia</option>
+            </select>
+            <select class="selectMultiple" multiple size="1" name="extras" id="extras">
+                <option value="disabled" selected disabled >Dodatek</option>
+                <option value="tapioca">Tapioka</option>
+                <option value="bobaMango">Kulki boba mango</option>
+                <option value="bobaPassionFruit">Kulki boba marakuja</option>
+                <option value="bobaStrawberry">Kulki boba truskawka</option>
+                <option value="bobaCherry">Kulki boba wiśnia</option>
+                <option value="bobaKiwi">Kulki boba kiwi</option>
+                <option value="jellyApple">Żelki zielone jabłko</option>
+                <option value="jellyGrape">Żelki winogrono</option>
+                <option value="jellyLychee">Żelki liczi</option>
+            </select>
+        </div>
+        <label class="text-red-400 font-semibold m-4" id="labelExtras">*Każdy extra dodatek (+4zł), syrop (+3zł) </label>
+        <section id="sectionDiscount" class="flex items-center m-4 mt-2 text-white">
+            <input type="checkbox" name="discount" id="checkboxDiscount" class="w-4 h-4 bg-gray-100 border-gray-300 rounded dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600">
+            <label id="labelDiscount" class="ml-1">Mam swój kubek (10% rabatu)</label>
+        </section>
+    </main>
+</body>
+<script src="priceAdjustment.js"></script>
+</html>
